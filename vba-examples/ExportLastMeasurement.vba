@@ -1,6 +1,9 @@
+Option Explicit
+
 Sub ExportLastMeasurement()
 	'Initialisierung
-	Dim BASENAME As String
+	Dim BASE_URL As String
+	Dim LOCAL_DOWNLOAD_DIR As String
 	Dim RequestObj As Object
 	Dim fso As New FileSystemObject
 	Dim measurement_fn As String
@@ -8,6 +11,7 @@ Sub ExportLastMeasurement()
 	Dim download_fn As String
 	Dim JsonInfo As Object
 	Dim JsonDl As Object
+	Dim oStream As Object
 
 	BASE_URL = "http://192.168.0.114:3000"
 	LOCAL_DOWNLOAD_DIR = "C:\tmp\"
