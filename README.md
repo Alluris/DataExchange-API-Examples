@@ -19,4 +19,11 @@ Im Ordner `bash-examples/` finden Sie Beispielskripte, um die DataExchange-API p
 - `wget` kodiert im Test alles bis auf das Doppelkreuz `#`, darum muss das vorher an einer Stelle mit sed ersetzt werden (siehe Beispiel-Skripte).
 
 ## VBA examples
-TODO: Im Ordner `vba-examples/` finden Sie Beispielskripte, um die DataExchange-API per VBA-Skript anzusprechen.
+Im Ordner `vba-examples/` finden Sie Beispielskripte, um die DataExchange-API per VBA-Skript anzusprechen.
+Sie können eine "Excel-Arbeitsmappe mit Makros" erstellen (`.xlsm`), per Alt-F11 den VBA-Editor öffnen und dort den Code beispielsweise an das Tabellenblatt (Standard: "Tabelle1") hängen.
+
+### Beispiele
+- `ExportLastMeasurement.vba`: Erfragt den JSON-Dateinamen der letzte Messung, lädt die Messung als XLSX und öffnet diese als Arbeitsmappe
+
+### Anmerkungen
+- Die Beispiele verwenden [VBA-JSON](https://github.com/VBA-tools/VBA-JSON), um JSON-Antworten der API zu parsen. Bitte konsultieren Sie die dortige Installationsanleitung, um die Bibliothek ebenfalls zu verwenden.
