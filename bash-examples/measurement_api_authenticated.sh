@@ -5,7 +5,7 @@ curl -c cookie_store http://localhost:3000/login --data 'username=Service (abc)&
 echo -e "\n"
 
 # Schritt 2: Sitzung verwenden
-curl -b cookie_store http://localhost:3000/measurement_info/last
+curl -b cookie_store http://localhost:3000/measurements/info/last
 echo -e "\n"
 
 # Schritt 3: Sitzung zerstören

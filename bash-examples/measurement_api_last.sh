@@ -2,7 +2,7 @@
 BASE_URL="http://localhost:3000"
 
 # Schritt 1: Letzte Messung als JSON abfragen
-JSON_PATH=$(wget -qO - "$BASE_URL/measurement_info/last" | jq -r '.filename')
+JSON_PATH=$(wget -qO - "$BASE_URL/measurements/info/last" | jq -r '.filename')
 # im measurement_digest stehen ganze Pfade, die API arbeitet aber nur mit JSON-Dateinamen
 JSON_FN=$(basename "$JSON_PATH")
 echo "Dateiname Messung: $JSON_FN"

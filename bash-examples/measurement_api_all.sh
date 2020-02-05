@@ -2,7 +2,7 @@
 BASE_URL="http://localhost:3000"
 
 # Schritt 1: Alle Messungen als JSON abfragen, gibt komplettes measurement_digest als JSON zurück
-MEASUREMENT_DIGEST=$(wget -qO - $BASE_URL/measurement_info/all)
+MEASUREMENT_DIGEST=$(wget -qO - $BASE_URL/measurements/info/all)
 
 # Jetzt kann das Skript die Messung filtern, die es gerne hätte, zB.
 JSON_PATH=$(echo "$MEASUREMENT_DIGEST" | jq -r '.[0].names[0].descriptions[0].measurements[0].filename')

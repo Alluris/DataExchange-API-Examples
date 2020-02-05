@@ -18,9 +18,9 @@ Sub ExportLastMeasurement()
 
 	'Messungen abfragen
 	Set RequestObj = CreateObject("MSXML2.XMLHTTP")
-	RequestObj.Open "GET", BASE_URL & "/measurement_info/last", False
+	RequestObj.Open "GET", BASE_URL & "/measurements/info/last", False
 	RequestObj.Send
-	'Debug.Print "Ergebnis von measurement_info: " & RequestObj.ResponseText
+	'Debug.Print "Ergebnis von measurements/info: " & RequestObj.ResponseText
 
 	'Dateiname extrahieren, Antwort parsen mit https://github.com/VBA-tools/VBA-JSON
 	Set JsonInfo = JsonConverter.ParseJson(RequestObj.ResponseText)
