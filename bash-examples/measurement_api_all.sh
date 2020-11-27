@@ -10,7 +10,7 @@ JSON_PATH=$(echo "$MEASUREMENT_DIGEST" | jq -r '.[0].names[0].descriptions[0].me
 JSON_FN=$(basename "$JSON_PATH")
 
 # Schritt 2: Export anstoßen (kann lange dauern), gibt ein JSON zurück
-EXPORT_FN=$(wget -qO - "$BASE_URL/measurements/download/xlsx/$JSON_FN/true/null" | jq -r '.filename')
+EXPORT_FN=$(wget -qO - "$BASE_URL/measurements/download/xlsx/$JSON_FN/true/null/null" | jq -r '.filename')
 echo "Dateiname Export: $EXPORT_FN"
 
 # Schritt 3: Export herunterladen

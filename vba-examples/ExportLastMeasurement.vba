@@ -29,7 +29,7 @@ Sub ExportLastMeasurement()
 	Debug.Print "Dateiname der letzten Messung: " & json_fn
 
 	'Download anstoßen
-	RequestObj.Open "GET", BASE_URL & "/measurements/download/xlsx/" & json_fn & "/true/null", False
+	RequestObj.Open "GET", BASE_URL & "/measurements/download/xlsx/" & json_fn & "/true/null/null", False
 	RequestObj.Send
 	Set JsonInfo = JsonConverter.ParseJson(RequestObj.ResponseText)
 	download_fn = JsonInfo("filename")
