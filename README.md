@@ -27,3 +27,4 @@ Sie können eine "Excel-Arbeitsmappe mit Makros" erstellen (`.xlsm`), per Alt-F1
 
 ### Anmerkungen
 - Die Beispiele verwenden [VBA-JSON](https://github.com/VBA-tools/VBA-JSON), um JSON-Antworten der API zu parsen. Bitte konsultieren Sie die dortige Installationsanleitung, um die Bibliothek ebenfalls zu verwenden.
+- Wenn Sie beim Kompilieren einen Fehler "Dim fso As New FileSystemObject -> „Benutzerdefinierter Typ nicht definiert“" sehen, dann müssen Sie zuerst im VBA-Editor (Alt-F11) dort auf Extras ... Verweise und dort die Checkbox für den Eintrag "Microsoft Scripting Runtime" aktivieren.
